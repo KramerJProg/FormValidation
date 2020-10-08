@@ -3,5 +3,18 @@ window.onload = function () {
     formBtn.onclick = main;
 };
 function main() {
-    alert("Reg btn was clicked");
+    isTextPresent("first-name", "First name is required!");
+    isTextPresent("last-name", "Last name is required!");
+}
+function isTextPresent(id, errMsg) {
+    var txtBox = document.getElementById(id);
+    var txtBoxValue = txtBox.value;
+    if (txtBoxValue == "") {
+        var errSpan = txtBox.nextElementSibling;
+        errSpan.innerText = errMsg;
+        return false;
+    }
+    else {
+        return true;
+    }
 }
