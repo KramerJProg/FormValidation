@@ -25,7 +25,7 @@ h1{
     
 }
 
-h1, form label, form button, form input{
+h1, form label, form button, form input, form span{
     font-family: 'Syne Mono', monospace;
 }
 
